@@ -1,0 +1,10 @@
+.todo-input{
+  margin: 0px 20px 0px;
+  font-size: 1.2em;
+  padding: 5px 10px 5px 10px;
+}
+
+.todo-input:focus{
+  border: 3px solid lightblue;
+  box-shadow: 2px 2px 2px  2px lightblue;
+}

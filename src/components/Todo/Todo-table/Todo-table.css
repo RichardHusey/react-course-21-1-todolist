@@ -1,0 +1,17 @@
+.todo-list{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 20px 0px;
+}
+
+.todo-list li{
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  padding: 10px 0px 10px;
+}
+
+.todo-list li:last-child{
+  border-bottom: none;
+}

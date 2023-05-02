@@ -1,13 +1,11 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./Todo-inputs.css"
 
-export const TodoInput = ({mode, AddHandler}) => {
+export const TodoInput = ({mode, AddHandler, searchHandler}) => {
 
   const [input, setInput] = useState('');
 
-  
-
-  const handleChangeInput = (e,)=>{
+  const handleChangeInput = (e)=>{
     const todo = e.target.value;
     if(todo && e.key === "Enter"){
       AddHandler(todo);
@@ -16,6 +14,12 @@ export const TodoInput = ({mode, AddHandler}) => {
       setInput(()=>todo)
     }
   }
+
+  useEffect(()=>{
+    if(mode === "Search"){
+      searchHandler(input);
+    } 
+  },[input])
   return(
     <input 
       className="todo-input" 
